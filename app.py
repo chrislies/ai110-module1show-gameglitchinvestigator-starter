@@ -22,9 +22,10 @@ difficulty = st.sidebar.selectbox(
     index=1,
 )
 
+#FIX: Swapped limits to match the difficulty levels in the game. Easy: 8, Normal: 6, Hard: 5
 attempt_limit_map = {
-    "Easy": 6,
-    "Normal": 8,
+    "Easy": 8,
+    "Normal": 6,
     "Hard": 5,
 }
 attempt_limit = attempt_limit_map[difficulty]
@@ -37,7 +38,7 @@ st.sidebar.caption(f"Attempts allowed: {attempt_limit}")
 if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
-#FIX: Initialize session state for attempts to be 0
+#FIX: Initialize session state for attempts to be 0 
 if "attempts" not in st.session_state:
     st.session_state.attempts = 0
 
