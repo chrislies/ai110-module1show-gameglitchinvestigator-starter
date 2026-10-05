@@ -22,30 +22,22 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
-- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-- Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count.
+I used Claude Code to help guide my process in addressing issues in the code and explaining why certain features did not work as intended. One correct suggestion Claude Code made was to swap the the lower/higher hint messages since it would previously recommend to guess higher when submitting a guess that is higher than the answer and vice versa. One suggestion Claude Code made I did not accept was regarding the bug that prevented new guesses from being submitted after restarting a new game. The proposed solution did not take into consideration that all session states had to be reset which was something I had to emphasize.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
-- How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
-- Did AI help you design or understand any tests? How?
+A bug is considered fix if it passes all possible pytest test cases. I asked Claude Code to generate comprehensive tests for each of the game logic functions and to explain what each tests checks for. Having a large parameter set for the tests allow for multiple test cases to be checked.
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+The script runs top to bottom and re-runs the entire script whenever you interact with anything (clicking a button, submitting an entry, etc). Consequently, any variables set in the script will also be reset. This is why session state is crucial in Streamlit apps as the state does not get reset between app re-runs. The session state lives as long as your browser's tab/session stays open. Therefore, you should use session state for anything you want the app to remember.
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
-- What is one thing you would do differently next time you work with AI on a coding task?
-- In one or two sentences, describe how this project changed the way you think about AI generated code.
+One habit/strategy I want to use in future projects is to use AI to help create tests for my logic functions as I create them. Somethign I would do differently next time I work with AI on a coding task is to start small; understand what each function does and then build upon it or refactor for better efficiency and management. This project showed me how to efficiently use AI to guide me in finding and addressing bugs, and how to create comprehensive test cases in pytest to ensure functions are working as intended.
