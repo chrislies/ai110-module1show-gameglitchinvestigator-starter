@@ -10,15 +10,15 @@
 
 **What task did you give the agent?**
 
-<!-- Describe the goal you asked the agent to accomplish -->
+Create tests for each logic util covering all possible cases @logic_utils.py @tests/test_game_logic.py
 
 **What did the agent do?**
 
-<!-- List the steps the agent took (files edited, commands run, etc.) -->
+The agent rewrote tests/test_game_logic.py to cover all four functions in logic_utils.py
 
 **What did you have to verify or fix manually?**
 
-<!-- Describe anything the agent got wrong or that required human review -->
+I had to verify that the test inputs and parameters and expected results were correct
 
 ---
 
@@ -27,10 +27,10 @@
 > Document how you used AI to help generate or improve tests.
 
 | Edge Case | Prompt Used | AI-Suggested Test | Did It Pass? | Your Reasoning |
-|-----------|-------------|-------------------|--------------|----------------|
-| | | | | |
-| | | | | |
-| | | | | |
+| --------- | ----------- | ----------------- | ------------ | -------------- |
+|           |             |                   |              |                |
+|           |             |                   |              |                |
+|           |             |                   |              |                |
 
 ---
 
@@ -64,12 +64,12 @@
 
 <!-- Describe what you asked each model to do -->
 
-| | Model A | Model B |
-|-|---------|---------|
-| **Model name** | | |
-| **Response summary** | | |
-| **More Pythonic?** | | |
-| **Clearer explanation?** | | |
+|                          | Model A | Model B |
+| ------------------------ | ------- | ------- |
+| **Model name**           |         |         |
+| **Response summary**     |         |         |
+| **More Pythonic?**       |         |         |
+| **Clearer explanation?** |         |         |
 
 **Which did you prefer and why?**
 
