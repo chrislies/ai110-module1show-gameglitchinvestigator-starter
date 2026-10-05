@@ -1,6 +1,7 @@
 import random
 import streamlit as st
 
+#FIX: Moved util funtions to a separate file logic_utils.py and imported them here to keep app.py clean and organized.
 from logic_utils import (
     get_range_for_difficulty,
     parse_guess,

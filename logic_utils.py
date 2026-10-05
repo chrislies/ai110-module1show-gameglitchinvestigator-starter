@@ -1,3 +1,4 @@
+#FIX: Swapped ranges to match the difficulty levels in the game. Easy: 1-20, Normal: 1-50, Hard: 1-100
 def get_range_for_difficulty(difficulty: str):
     """Return (low, high) inclusive range for a given difficulty."""
     if difficulty == "Easy":
@@ -31,7 +32,7 @@ def parse_guess(raw: str):
 
     return True, value, None
 
-
+#FIX: Fixed comparison logic to ensure that the guess is compared to the secret correctly and returns appropriate messages for "Too High" and "Too Low" outcomes.
 def check_guess(guess, secret):
     """
     Compare guess to secret and return (outcome, message).
