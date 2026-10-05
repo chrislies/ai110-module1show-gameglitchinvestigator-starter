@@ -11,10 +11,8 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - The history stack is delayed. A guess gets appended onto the stack after you make a subsequent guess.
 
 **Bug Reproduction Log**
-
-Document at least 3 bugs you found. Add rows as needed.
-
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
+| - | - | - | - |
 | Submitting a guess lower than the answer | Hint should say guess higher | Hint says guess lower | n/a |
 | Number of attempts is set to 1 at the beginning of each game | Number of attempts should be reset to 0 when new game starts | Number of attempts is set to 1 after resetting | n/a |
 | Starting a new game does not allow guesses to be submitted | Game should allow new guesses for a new game | Game does not allow new guesses after game is reset | n/a |
